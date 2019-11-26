@@ -1,7 +1,7 @@
 # unice
 
 ## Purpose
-This project containts script files written in bash to automatically download courses lessons files on uniwa eclass.
+This project containts script files, written in bash, to automatically download courses files from uniwa eclass.
 
 ## Installation
 You will need all uni-* files, just download them and make sure you have excecution permission
