@@ -28,10 +28,28 @@ This scirpt lists all your subscribed courses with their names. The -s options l
 
 ### uni-request
 
-    ./uni-request [-d] <download_dir> [-f] <courses_ID-names> [-e] <course_ID_1> <coursed_ID_2> ... <course_ID_n>
+    ./uni-request [-d] <download_dir> [-f] <courses_file_name> [-e] <course_ID_1> <coursed_ID_2> ... <course_ID_n>
 
 This script attempts to download your wanted files. You will always need to specify -d option and -f or -e.
 
-With -d you will specify the folder you want to download your files.
+#### Option -d download_dir
 
-With -e 
+Specify download folder.
+
+#### Option -e course_ID_1 coursed_ID_2 ... course_ID_n
+
+Specify which courses you want to install by providing the corresponding ID.
+
+#### Option -f courses_file_name
+
+Specify the file which contains your wanted courses' ID and, optionally, name.
+If there is no name given for a course, then it will be generated automatically.
+
+The syntax inside "courses_file_name" must be; first column for IDs and second for names. For example:
+
+    ca987 math
+    ph345 electronics
+    ly123
+    cs67
+
+
