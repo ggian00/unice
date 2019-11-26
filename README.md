@@ -38,7 +38,7 @@ Specify download folder.
 
 #### Option -e course_ID_1 coursed_ID_2 ... course_ID_n
 
-Specify which courses you want to install by providing the corresponding ID.
+Specify which courses you want to install by providing the corresponding ID. Downloaded files' names will be generated automatically.
 
 #### Option -f courses_file_name
 
@@ -52,4 +52,9 @@ The syntax inside "courses_file_name" must be; first column for IDs and second f
     ly123
     cs67
 
+### uni-disconnect
+
+Logs out from session.
+
+##
 
