@@ -59,10 +59,12 @@ Logs out from session.
 ### Example
 
 Inside file "acc.txt"
+
     uname=xxxx
     passw=yyyy
  
- Run
+ Run in terminal
+    
     ./uni-connect acc.txt
     ./uni-list > courses.txt
     ./uni-request -d . -f courses.txt
