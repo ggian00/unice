@@ -5,7 +5,7 @@ This project containts script files written in bash to automatically download co
 
 ## Installation
 Just download the scripts and make sure you have excecution permission
-  chmod +x uni-connect uni-disconnect uni-list uni-request
+    chmod +x uni-connect uni-disconnect uni-list uni-request
 
 ## Usage
 
