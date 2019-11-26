@@ -28,7 +28,7 @@ This scirpt lists all your subscribed courses with their names. The -s options l
 
 ### uni-request
 
-    ./uni-request [-d] <download_dir> [-f] <courses_file_name> [-e] <course_ID_1> <coursed_ID_2> ... <course_ID_n>
+    ./uni-request -d <download_dir> [-f] <courses_file_name> [-e] <course_ID_1> <coursed_ID_2> ... <course_ID_n>
 
 This script attempts to download your wanted files. You will always need to specify -d option and -f or -e.
 
