@@ -56,5 +56,15 @@ The syntax inside "courses_file_name" must be; first column for IDs and second f
 
 Logs out from session.
 
-##
+### Example
+
+Inside file "acc.txt"
+    uname=xxxx
+    passw=yyyy
+ 
+ Run
+    ./uni-connect acc.txt
+    ./uni-list > courses.txt
+    ./uni-request -d . -f courses.txt
+    ./uni-disconnect
 
