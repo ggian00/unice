@@ -74,4 +74,6 @@ Inside "acc.txt" file:
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
-This project is using [curl](https://curl.haxx.se/)
+This project is using [curl](https://curl.haxx.se/), a free command line tool and library.
+*github: https://github.com/curl/curl
+*curl license: https://curl.haxx.se/docs/copyright.html
