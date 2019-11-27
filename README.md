@@ -75,5 +75,5 @@ Inside "acc.txt" file:
 
 ## Acknowledgments
 This project is using [curl](https://curl.haxx.se/), a free command line tool and library.
-*github: https://github.com/curl/curl
-*curl license: https://curl.haxx.se/docs/copyright.html
++ github: https://github.com/curl/curl
++ curl license: https://curl.haxx.se/docs/copyright.html
