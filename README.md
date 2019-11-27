@@ -74,4 +74,4 @@ Inside "acc.txt" file:
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
-[curl](https://curl.haxx.se/)
+This project is using [curl](https://curl.haxx.se/)
