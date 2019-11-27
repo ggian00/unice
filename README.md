@@ -22,9 +22,9 @@ You can enter your account details either by editing the source code, or by prov
  
 ### uni-list
 
-    ./uni-list [-s]
+    ./uni-list [-n]
 
-This scirpt lists all your subscribed courses with their names. The -s options lists only the courses ID code.
+This scirpt lists all your subscribed courses ID. The -n options, also, displays their corresponding names.
 
 ### uni-request
 
@@ -71,7 +71,7 @@ Inside "acc.txt" file:
     ./uni-disconnect
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
++ [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
 This project is using [curl](https://curl.haxx.se/), a free command line tool and library.
