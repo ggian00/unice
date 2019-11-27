@@ -15,7 +15,7 @@ You will need all uni-* files, just download them and make sure you have excecut
     ./uni-connect [account_file]
 
 This script logs in to the webserver, so you can download your files.
-You can enter your account details either by editing the source code, or by providing a file with it. The syntax must be as follows:
+Enter your account details by providing a file with it. The syntax must be as follows:
 
     uname=your_user_name
     passw=your_password
