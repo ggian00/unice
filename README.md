@@ -70,3 +70,8 @@ Inside "acc.txt" file:
     ./uni-request -d . -f courses.txt
     ./uni-disconnect
 
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgments
+This project is using [cURL] (https://curl.haxx.se/) tool
