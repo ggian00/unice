@@ -1,0 +1,41 @@
+#!/bin/bash
+
+. ./uni-global_var
+
+if [ $# -ne 1 ] ; then
+    echo "error $0: wrong arguments!" 1>&2
+    echo "usage: $0 <account_file>" 1>&2
+    exit 1
+elif [ -e "$1" ] ; then
+    uname=$(grep uname $1 | cut -d "=" -f 2)
+    passw=$(grep passw $1 | cut -d "=" -f 2)
+else
+    echo "error $0: username/passw file not found" 1>&2
+    exit 1;
+fi
+
+if [ -e "$cookie_path" ] ; then
+    echo "Found previous session."
+    echo "Disconnecting from previous session."
+    cookie=$(grep PHPSESSID $cookie_path)
+    curl --silent 'https://eclass.uniwa.gr/index.php?logout=yes' --compressed -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer: https://eclass.uniwa.gr/main/portfolio.php' -H "Cookie: $cookie" -H 'Upgrade-Insecure-Requests: 1' -H 'TE: Trailers' > /dev/null
+    echo "Disconnected."
+fi
+
+cookie="$(curl --silent -I https://eclass.uniwa.gr/ | grep PHP | sed -r 's/.*(PHPSESSID=[[:alnum:]]*;).*/\1/')"
+date="date=""$(curl --silent -I https://eclass.uniwa.gr/ | grep date: | sed -r 's/.*date:[[:space:]](.*[[:alnum:]]*)[[:space:]]*$/\1/')"
+
+echo $cookie > $cookie_path
+echo $date >> $cookie_path
+
+echo "Attempting user authorization."
+
+ans=$(curl --silent --digest 'https://eclass.uniwa.gr/' -H "$accept" -H "$accept_language" --compressed -H 'Content-Type: application/x-www-form-urlencoded' -H 'Origin: https://eclass.uniwa.gr' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer: https://eclass.uniwa.gr/index.php?logout=yes' -H "Cookie: $cookie" -H 'Upgrade-Insecure-Requests: 1' -H 'TE: Trailers' --data "uname=$uname&pass=$passw&submit=" | grep "alert-warning")
+
+if [ "$ans" != "" ] ; then
+    echo "User authorization failed!" 1>&2
+    exit 1
+fi
+    echo "User authorization successful!"
+exit 0
+

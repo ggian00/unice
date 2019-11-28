@@ -1,0 +1,12 @@
+#!/bin/bash
+. ./uni-global_var
+
+if [ -e "$cookie_path" ] ; then
+    echo "Found previous session."
+    echo "Disconnecting from previous session."
+    cookie=$(grep PHPSESSID $cookie_path)
+    curl --silent 'https://eclass.uniwa.gr/index.php?logout=yes' --compressed -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer: https://eclass.uniwa.gr/main/portfolio.php' -H "Cookie: $cookie" -H 'Upgrade-Insecure-Requests: 1' -H 'TE: Trailers' > /dev/null
+    echo "Disconnected."
+else 
+    echo "No session found. No need for disconnection"
+fi

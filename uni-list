@@ -1,0 +1,14 @@
+ #!/bin/bash
+
+. ./uni-global_var
+
+url='https://eclass.uniwa.gr/main/my_courses.php'
+
+cookie=$(grep PHPSESSID $cookie_path)
+
+if [ "$1" = '-n' ] ; then
+    curl --silent 'https://eclass.uniwa.gr/main/my_courses.php' -H "$accept" -H "$accept_language" --compressed -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer: https://eclass.uniwa.gr/main/portfolio.php' -H "Cookie: $cookie" -H 'Upgrade-Insecure-Requests: 1' -H 'TE: Trailers' | grep "lesson-title-link" | sed -r "s/.*courses\/([[:alnum:]]*)\/.*lesson-title-link\">(.*)<\/a.*/\1 \2/"
+else
+    curl --silent 'https://eclass.uniwa.gr/main/my_courses.php' -H "$accept" -H "$accept_language" --compressed -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer: https://eclass.uniwa.gr/main/portfolio.php' -H "Cookie: $cookie" -H 'Upgrade-Insecure-Requests: 1' -H 'TE: Trailers' | grep "lesson-title-link" | sed -r "s/.*courses\/([[:alnum:]]*)\/.*/\1/"
+fi
+
