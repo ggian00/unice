@@ -8,6 +8,11 @@ This project containts script files, written in bash, to automatically download 
 + linux shell (sh, bash, ...)
 + [curl](https://curl.haxx.se/) tool
 
+curl is usually provided by your linux distribution.
+For ubuntu based distributions run:
+
+    sudo apt install curl
+
 ## Installation
 You will need all uni-* files, just download them and make sure you have excecution permission
 
