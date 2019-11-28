@@ -3,6 +3,11 @@
 ## Purpose
 This project containts script files, written in bash, to automatically download courses files from uniwa eclass.
 
+## Prerequisites
+
++ linux shell (sh, bash, ...)
++ [curl](https://curl.haxx.se/) tool
+
 ## Installation
 You will need all uni-* files, just download them and make sure you have excecution permission
 
